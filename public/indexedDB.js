@@ -18,7 +18,7 @@ request.onupgradeneeded = function (event) {
     console.log(event.target.errorCode);
   };
 
-  function saveRecord(record) {
+   function saveRecord(record) {
     const transaction = db.transaction(["pending"], "readwrite");
     
     const pendingStore = transaction.objectStore("pending");
@@ -59,3 +59,5 @@ request.onupgradeneeded = function (event) {
   }
   
   window.addEventListener('online', checkDatabase);
+
+  
